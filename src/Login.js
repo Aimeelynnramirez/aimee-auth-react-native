@@ -8,7 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 import UploadScreen from './UploadScreen';
 import UploadPage from './UploadPage';
 import axios from 'axios';
-var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+var apiBaseUrl = "http://localhost:4741";
 
 class Login extends Component {
   constructor(props){
@@ -18,9 +18,9 @@ class Login extends Component {
       <MuiThemeProvider>
         <div>
          <TextField
-           hintText="Enter your College Rollno"
+           hintText="Enter your Input"
            floatingLabelText="User Id"
-           onChange = {(event,newValue) => this.setState({username:newValue})}
+           onChange = {(event,newValue) => this.setState({email:newValue})}
            />
          <br/>
            <TextField
@@ -35,7 +35,7 @@ class Login extends Component {
        </MuiThemeProvider>
     )
     this.state={
-      username:'',
+      email:'',
       password:'',
       menuValue:1,
       loginComponent:localloginComponent,
@@ -54,7 +54,7 @@ class Login extends Component {
            <TextField
              hintText="Enter your Input"
              floatingLabelText="User Id"
-             onChange = {(event,newValue) => this.setState({username:newValue})}
+             onChange = {(event,newValue) => this.setState({email:newValue})}
              />
            <br/>
              <TextField
@@ -79,7 +79,7 @@ class Login extends Component {
            <TextField
              hintText="Enter your Input"
              floatingLabelText="Admin Id"
-             onChange = {(event,newValue) => this.setState({username:newValue})}
+             onChange = {(event,newValue) => this.setState({email:newValue})}
              />
            <br/>
              <TextField
@@ -100,7 +100,7 @@ class Login extends Component {
   handleClick(event){
     var self = this;
     var payload={
-      "userid":this.state.username,
+      "email":this.state.email,
 	    "password":this.state.password,
       "role":this.state.loginRole
     }
@@ -114,12 +114,12 @@ class Login extends Component {
        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
      }
      else if(response.data.code == 204){
-       console.log("Username password do not match");
+       console.log("email password do not match");
        alert(response.data.success)
      }
      else{
-       console.log("Username does not exists");
-       alert("Username does not exist");
+       console.log("email does not exists");
+       alert("email does not exist");
      }
    })
    .catch(function (error) {
@@ -138,7 +138,7 @@ class Login extends Component {
            <TextField
              hintText="Enter your Input"
              floatingLabelText="User Id"
-             onChange = {(event,newValue) => this.setState({username:newValue})}
+             onChange = {(event,newValue) => this.setState({email:newValue})}
              />
            <br/>
              <TextField
@@ -162,7 +162,7 @@ class Login extends Component {
            <TextField
              hintText="Enter your Input"
              floatingLabelText="Admin Id"
-             onChange = {(event,newValue) => this.setState({username:newValue})}
+             onChange = {(event,newValue) => this.setState({email:newValue})}
              />
            <br/>
              <TextField

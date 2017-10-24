@@ -1,10 +1,7 @@
 body {
   margin: 5%;
-  padding:5%;
+  padding: 5%;
   text-align: center;
-  color:pink;
+  color: pink;
   font-family: sans-serif;
-}
-.button {
-  background: pink;
 }

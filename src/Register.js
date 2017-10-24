@@ -20,15 +20,16 @@ class Register extends Component {
     console.log("nextProps",nextProps);
   }
   handleClick(event,role){
-    var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+    var apiBaseUrl = "http://localhost:4741";
     // console.log("values in register handler",role);
     var self = this;
     //To be done:check for empty values before hitting submit
-    if(this.state.first_name.length>0 && this.state.last_name.length>0 && this.state.email.length>0 && this.state.password.length>0){
+    // if(this.state.first_name.length>0 && this.state.last_name.length>0 && this.state.email.length>0 && this.state.password.length>0){
+    if(this.state.email.length>0 && this.state.password.length>0){
       var payload={
-      "first_name": this.state.first_name,
-      "last_name":this.state.last_name,
-      "userid":this.state.email,
+      // "first_name": this.state.first_name,
+      // "last_name":this.state.last_name,
+      "email":this.state.email,
       "password":this.state.password,
       "role":role
       }
@@ -36,7 +37,7 @@ class Register extends Component {
      .then(function (response) {
        console.log(response);
        if(response.data.code == 200){
-        //  console.log("registration successfull");
+         console.log("registration successfull");
          var loginscreen=[];
          loginscreen.push(<Login parentContext={this} appContext={self.props.appContext} role={role}/>);
          var loginmessage = "Not Registered yet.Go to registration";
@@ -63,12 +64,12 @@ class Register extends Component {
     // console.log("props",this.props);
     var userhintText,userLabel;
     if(this.props.role == "student"){
-      userhintText="Enter your Student Id",
-      userLabel="Student Id"
+      userhintText="Enter your User Id",
+      userLabel="User Id"
     }
     else{
-      userhintText="Enter your Teacher Id",
-      userLabel="Teacher Id"
+      userhintText="Enter your Admin Id",
+      userLabel="Admin Id"
     }
     return (
       <div>
