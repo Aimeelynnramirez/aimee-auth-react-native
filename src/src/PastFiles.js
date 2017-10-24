@@ -16,15 +16,14 @@
 // import Checkbox from 'material-ui/Checkbox';
 // import './App.css';
 // import FontIcon from 'material-ui/FontIcon';
-// var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+// var apiBaseUrl = "http://localhost:4000/api/";
 //
 // /*
 // Module:superagent
 // superagent is used to handle post/get requests to server
 // */
 // var request = require('superagent');
-//
-// export default class UploadScreen extends Component {
+// export default class PastFiles extends Component {
 //   constructor(props){
 //     super(props);
 //     this.state={
@@ -101,5 +100,4 @@
 // const style = {
 //   margin: 15,
 // };
-
-// export default UploadScreen;
+// // export default PastFiles;

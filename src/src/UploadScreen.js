@@ -16,7 +16,7 @@
 // import Checkbox from 'material-ui/Checkbox';
 // import './App.css';
 // import FontIcon from 'material-ui/FontIcon';
-// var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+// var apiBaseUrl = "http://localhost:4000/api/";
 //
 // /*
 // Module:superagent
@@ -101,5 +101,5 @@
 // const style = {
 //   margin: 15,
 // };
-
-// export default UploadScreen;
+//
+// // export default UploadScreen;
