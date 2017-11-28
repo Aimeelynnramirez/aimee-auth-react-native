@@ -23,9 +23,9 @@ Module:superagent
 superagent is used to handle post/get requests to server
 
 */
-var request = require('superagent');
+const request = require('superagent');
 request
-  .get( 'https://backendcapstonelocal.herokuapp.com/manifest.json ')
+  .get( 'https://backendcapstonelocal.herokuapp.com ')
   .end(function(err, res){
     console.log(res);
   });
