@@ -24,7 +24,7 @@ superagent is used to handle post/get requests to server
 
 */
 const request = require('superagent');
-request
+  request
   .get( 'https://backendcapstonelocal.herokuapp.com ')
   .end(function(err, res){
     console.log(res);
@@ -49,7 +49,7 @@ componentDidMount(){
      console.log("some error ");
     }
     else{
-       console.log("response from server",JSON.stringify(res.body));
+      // console.log("response from server",JSON.stringify(res.body));
       if(res.body.code=="200"){
         var filestobeDisplayed = res.body.result;
         var filenamesDiv=[];
