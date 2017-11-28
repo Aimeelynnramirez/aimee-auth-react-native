@@ -20,8 +20,8 @@ class Register extends Component {
     console.log("nextProps",nextProps);
   }
   handleClick(event,role){
-    var apiBaseUrl = "http://localhost:4741";
-    // console.log("values in register handler",role);
+    var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+    console.log("values in register handler",role);
     var self = this;
     //To be done:check for empty values before hitting submit
     // if(this.state.first_name.length>0 && this.state.last_name.length>0 && this.state.email.length>0 && this.state.password.length>0){

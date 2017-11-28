@@ -3,9 +3,9 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import LoginScreen from './LoginScreen.js';
-import UploadScreen from './UploadScreen.js';
-import UploadPage from './UploadPage.js';
+import LoginScreen from './LoginScreen';
+import UploadScreen from './UploadScreen';
+import UploadPage from './UploadPage';
 
 class App extends Component {
   constructor(props){
@@ -27,6 +27,8 @@ class App extends Component {
       <div className="App">
         {this.state.loginPage}
         {this.state.uploadScreen}
+        <UploadScreen/>
+        <UploadPage/>
       </div>
     );
   }
@@ -34,5 +36,11 @@ class App extends Component {
 
 const style = {
   margin: 15,
+  backgroundColor: '#000',
+          flex: 1,
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          justifyContent: 'center',
 };
 export default App;

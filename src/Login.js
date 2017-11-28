@@ -8,7 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 import UploadScreen from './UploadScreen';
 import UploadPage from './UploadPage';
 import axios from 'axios';
-var apiBaseUrl = "http://localhost:4741";
+var apiBaseUrl = 'https://backendcapstonelocal.herokuapp.com/';
 
 class Login extends Component {
   constructor(props){
@@ -43,7 +43,7 @@ class Login extends Component {
     }
   }
   componentWillMount(){
-  // console.log("willmount prop values",this.props);
+   console.log("willmount prop values",this.props);
   if(this.props.role != undefined){
     if(this.props.role == 'user'){
       console.log("in user componentWillMount");
@@ -71,7 +71,7 @@ class Login extends Component {
       this.setState({menuValue:1,loginComponent:localloginComponent,loginRole:'user'})
     }
     else if(this.props.role == 'admin'){
-      console.log("in admin componentWillMount");
+    //   console.log("in admin componentWillMount");
       var localloginComponent=[];
       localloginComponent.push(
         <MuiThemeProvider>

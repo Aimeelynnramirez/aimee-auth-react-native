@@ -16,18 +16,26 @@ import EditorInsertChart from 'material-ui/svg-icons/editor/insert-chart';
 import Checkbox from 'material-ui/Checkbox';
 import './App.css';
 import FontIcon from 'material-ui/FontIcon';
-var apiBaseUrl = "http://localhost:4741";
+var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
 
 /*
 Module:superagent
 superagent is used to handle post/get requests to server
 */
-var request = require('superagent');
-export default class PastFiles extends Component {
+
+  const request = require('superagent');
+request
+  .get('https://backendcapstonelocal.herokuapp.com/data.json')
+  .end(function(err, res){
+    console.log(res);
+  });
+  
+  
+  export default class PastFiles extends Component {
   constructor(props){
     super(props);
     this.state={
-      role:'student',
+      role:'user',
       filesPreview:[],
       previousfilesList:[],
       filesToBePrinted:[]
@@ -41,7 +49,7 @@ componentDidMount(){
      console.log("some error ");
     }
     else{
-      // console.log("response from server",JSON.stringify(res.body));
+      console.log("response from server",JSON.stringify(res.body));
       if(res.body.code=="200"){
         var filestobeDisplayed = res.body.result;
         var filenamesDiv=[];
@@ -85,7 +93,7 @@ handleFileCheck(event,value){
       }
     }
   }
-  console.log("somename",JSON.stringify(filesToBePrinted));
+  // console.log("somename",JSON.stringify(filesToBePrinted));
   this.setState({filesToBePrinted})
 
 }
@@ -100,4 +108,4 @@ render() {
 const style = {
   margin: 15,
 };
-export default PastFiles;
+

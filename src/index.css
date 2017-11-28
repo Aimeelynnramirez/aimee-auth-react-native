@@ -1,7 +1,18 @@
 body {
-  margin: 5%;
-  padding: 5%;
   text-align: center;
-  color: pink;
-  font-family: sans-serif;
+    background: '#E0D4E2';
+          flex: 1;
+          position: 'absolute';
+          width: '50%';
+          height: '100%';
+          justifyContent: 'left';
+}
+div { 
+  text-align: center;
+    background: '#E0D4E2';
+          flex: 1;
+          position: 'absolute';
+          width: '50%';
+          height: '50%';
+          justifyContent: 'left';
 }
