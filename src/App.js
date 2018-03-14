@@ -27,8 +27,8 @@ class App extends Component {
       <div className="App">
         {this.state.loginPage}
         {this.state.uploadScreen}
-        <UploadScreen/>
         <UploadPage/>
+        
       </div>
     );
   }
