@@ -30,8 +30,8 @@ class Login extends Component {
     
      
       <MuiThemeProvider>
-        
-         {list}
+        <p>this is a example of child:</p>
+       <ol> {list}</ol>
       {list.newListItem}
         <div>
           
