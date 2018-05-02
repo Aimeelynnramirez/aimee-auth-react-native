@@ -23,13 +23,21 @@ Module:superagent
 superagent is used to handle post/get requests to server
 */
 
+
+
   const request = require('superagent');
 request
-  .get('https://backendcapstonelocal.herokuapp.com/data.json')
+  .get('https://localhost:3000/data.json')
   .end(function(err, res){
-    console.log(res);
-  });
+    
+        
+    
   
+  
+
+    console.log(res);
+  
+  });
   
   export default class PastFiles extends Component {
   constructor(props){

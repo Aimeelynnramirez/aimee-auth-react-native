@@ -16,7 +16,7 @@ import EditorInsertChart from 'material-ui/svg-icons/editor/insert-chart';
 import Checkbox from 'material-ui/Checkbox';
 import './App.css';
 import FontIcon from 'material-ui/FontIcon';
-var apiBaseUrl = 'https://backendcapstonelocal.herokuapp.com/';
+var apiBaseUrl = 'https://httpbin.org/';
 
 /*
 Module:superagent
@@ -25,7 +25,7 @@ superagent is used to handle post/get requests to server
 */
 const request = require('superagent');
   request
-  .get( 'https://backendcapstonelocal.herokuapp.com ')
+  .get( 'https://httpbin.org/anything')
   .end(function(err, res){
     console.log(res);
   });

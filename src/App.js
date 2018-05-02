@@ -6,6 +6,10 @@ import './App.css';
 import LoginScreen from './LoginScreen';
 import UploadScreen from './UploadScreen';
 import UploadPage from './UploadPage';
+const list = ["Bill","Jean","Sally","Lucy"]
+ let newListItem =["Benny","Louis"]
+ list.child = list.newListItem;
+//  $( "<div>Names:"+ "<br>"+ list + "," + this.newListItem +"</div>" ).appendTo( ".inner" );
 
 class App extends Component {
   constructor(props){
@@ -33,6 +37,7 @@ class App extends Component {
     );
   }
 }
+
 
 const style = {
   margin: 15,
