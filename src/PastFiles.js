@@ -16,7 +16,7 @@ import EditorInsertChart from 'material-ui/svg-icons/editor/insert-chart';
 import Checkbox from 'material-ui/Checkbox';
 import './App.css';
 import FontIcon from 'material-ui/FontIcon';
-var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com";
+var apiBaseUrl = "https://ladycodeit-a770e.firebaseio.com";
 
 /*
 Module:superagent

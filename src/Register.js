@@ -20,7 +20,7 @@ class Register extends Component {
     console.log("nextProps",nextProps);
   }
   handleClick(event,role){
-    var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com";
+    var apiBaseUrl = "https://ladycodeit-a770e.firebaseio.com";
     console.log("values in register handler",role);
     var self = this;
     //To be done:check for empty values before hitting submit
