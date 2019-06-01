@@ -16,7 +16,7 @@ import EditorInsertChart from 'material-ui/svg-icons/editor/insert-chart';
 import Checkbox from 'material-ui/Checkbox';
 import './App.css';
 import FontIcon from 'material-ui/FontIcon';
-var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com/";
+var apiBaseUrl = "https://backendcapstonelocal.herokuapp.com";
 
 /*
 Module:superagent
@@ -27,14 +27,8 @@ superagent is used to handle post/get requests to server
 
   const request = require('superagent');
 request
-  .get('https://localhost:3000/data.json')
+  .get('https://ladycodeit-a770e.firebaseio.com/data.json')
   .end(function(err, res){
-    
-        
-    
-  
-  
-
     console.log(res);
   
   });

@@ -8,16 +8,16 @@ import MenuItem from 'material-ui/MenuItem';
 import UploadScreen from './UploadScreen';
 import UploadPage from './UploadPage';
 import axios from 'axios';
-var apiBaseUrl = 'https://backendcapstonelocal.herokuapp.com/';
+var apiBaseUrl = 'https://backendcapstonelocal.herokuapp.com';
 // example for Childern
-const list = ["bread","milk","honey","yes"]
+/* const list = ["bread","milk","honey","yes"]
  list[''] = this.newListItem
  this.newListItem =  list.child;
 
  list.newListItem = ["meat", "water"]
 
 console.log(list)
-
+ */
 
 
 //  $( "<div>Names:"+ "<br>"+ list + "," + this.newListItem +"</div>" ).appendTo( ".inner" );
@@ -30,9 +30,9 @@ class Login extends Component {
     
      
       <MuiThemeProvider>
-        <p>this is a example of child:</p>
+    {/*     <p>this is a example of child:</p>
        <ol> {list}</ol>
-      {list.newListItem}
+      {list.newListItem} */}
         <div>
           
          <TextField
